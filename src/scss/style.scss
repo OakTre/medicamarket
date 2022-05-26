@@ -1,0 +1,16 @@
+:root {
+	// colors
+	--color-base-dark: #222222;
+
+  // Typography
+	--main-ff: "Golos", sans-serif;
+
+  --header-height: 10.4rem;
+  --transition: 200ms;
+}
+
+@import "./helpers/media";
+@import './vendor/vendor';
+@import "./settings/settings";
+@import "./blocks/blocks";
+@import './pages/pages';
