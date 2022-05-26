@@ -1,9 +1,59 @@
 :root {
 	// colors
-	--color-base-dark: #222222;
+	--color-base-dark: #011F3A;
+  --color-grey-600: #99A5B0;
+  --color-grey-400: #E0E4EB;
+  --color-grey-300: #EFF1F5;
+  --color-grey-200: #F6F7FB;
+  --color-grey-100: #FAFBFD;
+  --color-grey-50: #FFFFFF;
+  --color-white: var(--color-grey-50);
+
+  --color-warning: #EB5757;
+  --color-orange: #EB9B51;
+  --color-acces: #30BE6D;
+  --color-important: #109FFC;
+  --gardient-primary: linear-gradient(315.2deg, #14D7F2 -55.57%, #1CD5A8 35.43%, #22D26D 116.11%);
+  --gradient-priamry2: linear-gradient(135deg, rgba(153,165,176,1) 45%, rgba(20,215,242,1) 60%, rgba(28,213,168,1) 69%, rgba(34,210,109,1) 85%);
+
+  --color-green-type4: #95DC94;
+
+  --gradient-sticker: linear-gradient(281.19deg, #10C5FE -16.7%, #0F7AF9 120.21%);
+  --gradient-bonus: linear-gradient(281.19deg, #14B2F2 -16.7%, #D222CB 120.21%);;
+  --color-type1: linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%);;
+  --color-type2: linear-gradient(295.93deg, #C614F2 -36.47%, #F9D61B 96.64%);
+  --color-type3: linear-gradient(295.93deg, #C614F2 -36.47%, #1BF9EC 96.64%);
+
 
   // Typography
 	--main-ff: "Golos", sans-serif;
+
+  --font-heading-h1: 400 6rem/110% var(--main-ff);
+  --font-heading-h2-md: 500 3.6rem/110% var(--main-ff);
+  --font-heading-h2: 400 3.6rem/110% var(--main-ff);
+  --font-heading-h3-md: 500 2.8rem/110% var(--main-ff);
+  --font-heading-h4-md: 500 2.4rem/150% var(--main-ff);
+  --font-heading-h4: 400 2.4rem/150% var(--main-ff);
+  --font-heading-h5-md: 500 1.8rem/1.2 var(--main-ff);
+
+  --font-text-t1-md: 500 2rem/1.2 var(--main-ff);
+  --font-text-t1: 400 2rem/1.2 var(--main-ff);
+  --font-text-t2-md: 500 1.8rem/115% var(--main-ff);
+  --font-text-t2: 400 1.8rem/115% var(--main-ff);
+  --font-text-t3-bld: 700 1.6rem/1.2 var(--main-ff);
+  --font-text-t3-md: 500 1.6rem/1.2 var(--main-ff);
+  --font-text-t3: 400 1.6rem/1.2 var(--main-ff);
+  --font-text-t3-ln: 400 1.6rem/150% var(--main-ff);
+  --font-text-t4-md: 500 1.4rem/1.2 var(--main-ff);
+  --font-text-t4: 400 1.4rem/1.2 var(--main-ff);
+  --font-text-t4-ln: 400 1.4rem/140% var(--main-ff);
+  --font-text-t5-md: 500 1.2rem/1.2 var(--main-ff);
+  --font-text-t5: 400 1.2rem/1.2 var(--main-ff);
+
+  --font-label: 400 1rem/1.2 var(--main-ff);
+
+  --content-padding: 40px;
+  --grid-offset: 16px;
 
   --header-height: 10.4rem;
   --transition: 200ms;

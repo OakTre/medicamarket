@@ -6,6 +6,7 @@
 		"dev": "gulp watch",
 		"build:dev": "gulp build",
 		"build:prod": "gulp build --prod",
+    "predeploy": "gulp build --prod",
     "deploy": "gh-pages -d build"
 	},
 	"lint-staged": {
@@ -30,8 +31,9 @@
 		"linters"
 	],
 	"browserslist": [
-		"> 0.1%",
-		"IE 11"
+		"last 2 versions",
+    "> 1%",
+    "not ie <= 9"
 	],
 	"author": "meme",
 	"license": "WTFPL",
@@ -61,7 +63,6 @@
 		"gulp-pug": "^5.0.0",
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^5.1.0",
-		"gulp-sass-glob": "^1.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-svg-sprite": "^1.5.0",
 		"gulp-uglify": "^3.0.2",
@@ -69,7 +70,6 @@
 		"imagemin-pngquant": "^9.0.2",
 		"imagemin-webp": "^7.0.0",
 		"lint-staged": "^12.3.5",
-		"pug-include-glob": "^0.4.3",
 		"pug-lint": "^2.6.0",
 		"sass": "^1.51.0",
 		"stylelint": "^14.5.3",

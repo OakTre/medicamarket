@@ -7,7 +7,6 @@ import gcmq from 'gulp-group-css-media-queries';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import gulpif from 'gulp-if';
-import sassGlob from 'gulp-sass-glob';
 import config from '../config';
 
 const sass = gulpSass(dartSass);
@@ -15,12 +14,13 @@ const sass = gulpSass(dartSass);
 export const sassBuild = () => (
   gulp.src(`${config.src.sass}/style.scss`, { sourcemaps: config.isDev })
     .pipe(plumber())
-    .pipe(sassGlob())
     .pipe(sass({
       includePaths: ['node_modules'],
     }))
     .pipe(gulpif(config.isProd, gcmq()))
-    .pipe(gulpif(config.isProd, autoprefixer()))
+    .pipe(gulpif(config.isProd, autoprefixer({
+      cascade: false
+    })))
     .pipe(gulpif(config.isProd, cleanCSS({ level: 2 })))
     .pipe(rename({
       suffix: '.min',

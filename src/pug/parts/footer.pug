@@ -1,1 +1,75 @@
+-
+  let nav1 = [
+    "Самовывоз",
+    "Доставка курьером",
+    "Доставка трансопртной компанией",
+    "Способ оплаты"
+  ]
+
+  let nav2 = [
+    "Поставщикам",
+    "Медучреждениям",
+    "Оптовым покупателям",
+  ]
+
+  let nav3 = [
+    "Возврат/обмен",
+    "Сопровождение обращений",
+    "Ремонт и услуги",
+    "Сервисные центры",
+    "Прокат мед. техники"
+  ]
+
+  let nav4 = [
+    "О нас",
+    "Индивидуальные стельки под заказ",
+    "Карта рассрочки «Халва»",
+    "Бонусная программа",
+    "Компенсация по ИПР",
+    "Новости",
+    "Контакты"
+  ]
+
 footer.footer
+  .site-container.footer__container
+    .grid-container.footer__top
+      .footer__top-block
+        a(href="tel:+78005502015" data-text="Бесплатно по России" class="footer__tel") 8 800 550–20–15
+        span.footer__legend Доставка и оплата
+        ul.footer__nav-list
+          for item in nav1
+            li.footer__nav-item
+              a(href="/" class="footer__nav-link")= item
+
+        span.footer__legend Компаниям
+        ul.footer__nav-list
+          for item in nav2
+            li.footer__nav-item
+              a(href="/" class="footer__nav-link")= item
+      .footer__top-block
+        a(href="tel:+73852570077" data-text="Бесплатно по России" class="footer__tel") (3852) 57–00–77
+
+        span.footer__legend Гарантия и сервис
+        ul.footer__nav-list
+          for item in nav3
+            li.footer__nav-item
+              a(href="/" class="footer__nav-link")= item
+
+        span.footer__legend Покупателям
+        ul.footer__nav-list
+          for item in nav4
+            li.footer__nav-item
+              a(href="/" class="footer__nav-link")= item
+      .footer__top-block
+    .grid-container.footer__copyright
+      .grid-container__block.footer__copyright-block
+        p © Все права защищены 2022
+      .grid-container__block.footer__copyright-block
+        a(href="/") Карта сайта
+        a(href="/") Нормативная информация
+        a(href="/") Политика конфиденциальности
+        a(href="/") Как сделать заказ
+        a(href="/" class="footer__markweber")
+          | Разработка сайта
+          +icon-multi("MarkWeber")
+
