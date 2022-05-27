@@ -1,2 +1,47 @@
+-
+  const topNav = [
+    "Доставка и оплата",
+    "Гарантия и сервис",
+    "Покупателям",
+    "Магазины",
+  ]
+
 header.header
-  .site-container.header__container
+  .site-container
+    .header__row.grid-container
+      .grid-container__block
+        a.header__page-link(href="./") Частным клиентам
+        a.header__page-link(href="./") Бизнесу
+      .grid-container__block
+        button.header__popup-btn._city Барнаул
+        button.header__popup-btn._orderStatus Статус заказа
+        ul.header__top-nav
+          for item in topNav
+            li.header__top-nav-item
+              a.header__top-nav-link(href="./")= item
+        a(href="tel:+78005502015" class="header__tel")
+          span.header__tel-number
+            | 8 800 550–20–15
+          span.header__tel-text Бесплатно по России
+        a.header__personal-cabinet-btn(href="./")
+          +icon-mono("user")(class="header__personal-cabinet-btn-icon" width="20" height="20")
+          span.header__personal-cabinet-btn-count
+            +icon-mono("bonus")(class="header__personal-cabinet-btn-count-icon" width="14" height="14")
+            | 420
+
+    .header__row.grid-container
+      .grid-container__block
+        a.header__logo-link(href="./")
+          img(src="images/logo.svg" alt="Логотип Медикамаркет" class="header__logo")
+      .grid-container__block._flex-gap
+        button.button.header__catalog-btn.small
+          span.button__inner
+            +icon-mono("menu")(class="button__icon" width="24" height="24")
+            +icon-mono("cross")(class="button__icon _hidden" width="24" height="24")
+            span.button__name
+              | Каталог
+        +button("Акции", "sale", "small _stroke")(class="header__sales-btn")
+        form.header__search(action="/")
+          button.header__search-btn
+            +icon-mono("search")(class="header__search-btn-icon" width="20" height="20")
+          input(type="text" class="input" name="q" placeholder="Поиск оборудования")

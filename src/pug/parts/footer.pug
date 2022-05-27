@@ -61,6 +61,14 @@ footer.footer
             li.footer__nav-item
               a(href="/" class="footer__nav-link")= item
       .footer__top-block
+        .footer__shield
+          p.footer__shield-text
+            | Получайте самые интересные предложения и скидки
+          form.footer__shield-form(action="/")
+            .footer__shield-form-btn-wrapper
+              input(type="text" name="subscribe" placeholder="Введите Email")
+              +button("Подписаться", null, "_secondary small _no-icon")
+            p Нажимая кнопку «Подписаться» вы соглашаетесь с политикой конфиденциальности
     .grid-container.footer__copyright
       .grid-container__block.footer__copyright-block
         p © Все права защищены 2022
