@@ -18,10 +18,111 @@
   <body class="page-home">
     <div class="page-wrapper">
       <header class="header">
-        <div class="site-container header__container"></div>
+        <div class="site-container">
+          <div class="header__row grid-container">
+            <div class="grid-container__block"><a class="header__page-link" href="./">Частным клиентам</a><a class="header__page-link" href="./">Бизнесу</a></div>
+            <div class="grid-container__block">
+              <button class="header__popup-btn _city">Барнаул</button>
+              <button class="header__popup-btn _orderStatus">Статус заказа</button>
+              <ul class="header__top-nav">
+                <li class="header__top-nav-item"><a class="header__top-nav-link" href="./">Доставка и оплата</a></li>
+                <li class="header__top-nav-item"><a class="header__top-nav-link" href="./">Гарантия и сервис</a></li>
+                <li class="header__top-nav-item"><a class="header__top-nav-link" href="./">Покупателям</a></li>
+                <li class="header__top-nav-item"><a class="header__top-nav-link" href="./">Магазины</a></li>
+              </ul><a class="header__tel" href="tel:+78005502015"><span class="header__tel-number">8 800 550–20–15</span><span class="header__tel-text">Бесплатно по России</span></a><a class="header__personal-cabinet-btn" href="./">
+                <svg class="icon icon-user header__personal-cabinet-btn-icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#user"></use>
+                </svg><span class="header__personal-cabinet-btn-count">
+                  <svg class="icon icon-bonus header__personal-cabinet-btn-count-icon" width="14" height="14">
+                    <use xlink:href="images/sprites/sprite-mono.svg#bonus"></use>
+                  </svg>420</span></a>
+            </div>
+          </div>
+          <div class="header__row grid-container">
+            <div class="grid-container__block"><a class="header__logo-link" href="./"><img class="header__logo" src="images/logo.svg" alt="Логотип Медикамаркет"></a></div>
+            <div class="grid-container__block _flex-gap">
+              <button class="button header__catalog-btn small"><span class="button__inner">
+                  <svg class="icon icon-menu button__icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#menu"></use>
+                  </svg>
+                  <svg class="icon icon-cross button__icon _hidden" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#cross"></use>
+                  </svg><span class="button__name">Каталог</span></span></button>
+              <button class="button small _stroke header__sales-btn"><span class="button__inner">
+                  <svg class="icon icon-sale button__icon" width="24" height="24">
+                    <use xlink:href="images/sprites/sprite-mono.svg#sale"></use>
+                  </svg><span class="button__name">Акции</span></span></button>
+              <form class="header__search" action="/">
+                <button class="header__search-btn">
+                  <svg class="icon icon-search header__search-btn-icon" width="20" height="20">
+                    <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
+                  </svg>
+                </button>
+                <input class="input" type="text" name="q" placeholder="Поиск оборудования">
+              </form>
+            </div>
+          </div>
+        </div>
       </header>
       <main class="page-main main"></main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="site-container footer__container">
+          <div class="grid-container footer__top">
+            <div class="footer__top-block"><a class="footer__tel" href="tel:+78005502015" data-text="Бесплатно по России">8 800 550–20–15</a><span class="footer__legend">Доставка и оплата</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Самовывоз</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Доставка курьером</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Доставка трансопртной компанией</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Способ оплаты</a></li>
+              </ul><span class="footer__legend">Компаниям</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Поставщикам</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Медучреждениям</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Оптовым покупателям</a></li>
+              </ul>
+            </div>
+            <div class="footer__top-block"><a class="footer__tel" href="tel:+73852570077" data-text="Бесплатно по России">(3852) 57–00–77</a><span class="footer__legend">Гарантия и сервис</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Возврат/обмен</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Сопровождение обращений</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Ремонт и услуги</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Сервисные центры</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Прокат мед. техники</a></li>
+              </ul><span class="footer__legend">Покупателям</span>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">О нас</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Индивидуальные стельки под заказ</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Карта рассрочки «Халва»</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Бонусная программа</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Компенсация по ИПР</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Новости</a></li>
+                <li class="footer__nav-item"><a class="footer__nav-link" href="/">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__top-block">
+              <div class="footer__shield">
+                <p class="footer__shield-text">Получайте самые интересные предложения и скидки</p>
+                <form class="footer__shield-form" action="/">
+                  <div class="footer__shield-form-btn-wrapper">
+                    <input type="text" name="subscribe" placeholder="Введите Email">
+                    <button class="button _secondary small _no-icon"><span class="button__inner"><span class="button__name">Подписаться</span></span></button>
+                  </div>
+                  <p>Нажимая кнопку «Подписаться» вы соглашаетесь с политикой конфиденциальности</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="grid-container footer__copyright">
+            <div class="grid-container__block footer__copyright-block">
+              <p>© Все права защищены 2022</p>
+            </div>
+            <div class="grid-container__block footer__copyright-block"><a href="/">Карта сайта</a><a href="/">Нормативная информация</a><a href="/">Политика конфиденциальности</a><a href="/">Как сделать заказ</a><a class="footer__markweber" href="/">Разработка сайта
+                <svg class="icon icon-MarkWeber">
+                  <use xlink:href="images/sprites/sprite-multi.svg#MarkWeber"></use>
+                </svg></a></div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
   <script src="js/main.js?v=0.0.0.3"></script>
