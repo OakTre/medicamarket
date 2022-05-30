@@ -1,0 +1,135 @@
+-
+  const items = [
+    "Медтехника для дома",
+    "Ортопедия",
+    "Компрессионный трикотаж",
+    "Реабилитационная техника",
+    "Санитарные приспособления",
+    "Гигиена и уход за больными",
+    "Предметы облегчающие быт",
+    "Массажное оборудование",
+    "Красота и здоровье",
+    "Спорт и фитнес",
+    "Кислородное оборудование",
+    "Экология в доме",
+    "Товары для беременных и кормящих мам",
+    "Товары для детей",
+    "Медицинская одежда",
+    "Товары для медицинских учреждений",
+    "Товары для слабовидящих и слабослышащих",
+    "Товары для водителей"
+  ]
+
+  const catitems = [
+    {
+      name: "Тонометры",
+      list: [
+        "Автоматические тонометры",
+        "Автоматические тонометры на запястье",
+        "Полуавтоматические тонометры",
+        "Механические тонометры",
+        "Стетоскопы",
+        "Запасные части"
+      ]
+    },
+    {
+      name: "Физио/магнито терапия",
+      list: [
+        "Приборы Елатомского завода",
+        "Приборы Витафон",
+        "Аппараты лазерной, физио/магнито терапии",
+        "БИОМАГ магнитотерапия",
+        "Приборы фототерапии"
+      ]
+    },
+    {
+      name: "Грелки электрические/солевые",
+      list: [
+        "Электропростыни",
+        "Электрогрелки",
+        "Электроодеяло",
+        "Солевые аппликаторы",
+      ]
+    },
+    {
+      name: "Глюкометры и тест-полоски",
+      list: [
+        "Глюкометры",
+        "Тест-полоски",
+        "Ланцеты, ручки-прокалыватели",
+        "Принадлежности для ввода инсулина",
+        "Экспересс-тесты"
+      ]
+    }
+  ]
+
+  const catitems2 = [
+    {
+      name: "Ингаляторы и небулайзеры",
+      list: [
+        "Компрессорные ингаляторы и небулайзеры",
+        "Ультразвуковые ингаляторы и небулайзеры",
+        "Паровые ингаляторы",
+        "Дыхательные тренажеры",
+        "Запасные части",
+      ]
+    },
+    {
+      name: "Облучатели бактерицидные и рециркуляторы",
+      list: [
+        "Рециркуляторы/облучатели бактерицидные закрытого типа",
+        "Облучатели бактерицидные открытого типа",
+        "Ультрафиолетовые, инфракрасные",
+        "Запасные части"
+      ]
+    },
+    {
+      name: "Термометры",
+      list: [
+        "Электронные термометры",
+        "Инфракрасные термометры",
+        "Ртутные/безртутные термометры, Гигрометры",
+        "Гигрометры - термометры",
+      ]
+    }
+  ]
+
+.catalog-menu
+  .site-container.catalog-menu__wrapper
+    .catalog-menu__container
+      ul.catalog-menu__list.js-simple-bar
+        - let num = 0;
+        for item, index in items
+          - num++
+          - let isFirst = index === 0 ? "is-active" : null
+          li.catalog-menu__item(class=isFirst)
+            a.catalog-menu__link(href="/")
+              +icon-mono(`cat${num}`)(class="catalog-menu__link-icon" width="20" height="20")
+              span= item
+
+      .catalog-menu__categories-wrapper
+        .catalog-menu__categories
+          a.catalog-menu__categories-legend(href="/") Медтехника для дома
+          .catalog-menu__categories-blocks
+            .catalog-menu__categories-left-block.js-simple-bar
+              .catalog-menu__categories-col
+                for catItem in catitems
+                  span.catalog-menu__categories-list-legend= catItem.name
+                  ul.catalog-menu__categories-list
+                    for cat in catItem.list
+                      li.catalog-menu__categories-item
+                        a.catalog-menu__categories-item-link(href="/")= cat
+              .catalog-menu__categories-col
+                for catItem in catitems2
+                  span.catalog-menu__categories-list-legend= catItem.name
+                  ul.catalog-menu__categories-list
+                    for cat in catItem.list
+                      li.catalog-menu__categories-item
+                        a.catalog-menu__categories-item-link(href="/")= cat
+            .catalog-menu__categories-right-block.js-simple-bar
+              .catalog-menu__categories-logos
+                - let num2 = 0
+                - for (let i = 0; i<16; i++)
+                  - num2++
+                  a.catalog-menu__logo-link(href="/")
+                    img(src=`images/menu-catalog/logos/logo${num2}.jpg` alt="" class="catalog-menu__logo")

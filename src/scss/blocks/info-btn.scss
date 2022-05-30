@@ -1,0 +1,38 @@
+.info-btn {
+  &__wrapper {
+    position: relative;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--color-base-dark);
+  }
+
+  &__count {
+    position: absolute;
+    top: -0.4rem;
+    right: -0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--gardient-primary);
+    border-radius: 50%;
+    color: var(--color-white);
+    font: var(--font-text-t5-md);
+  }
+}

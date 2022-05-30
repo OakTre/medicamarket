@@ -7,7 +7,7 @@
   ]
 
 header.header
-  .site-container
+  .site-container.header__container
     .header__row.grid-container
       .grid-container__block
         a.header__page-link(href="./") Частным клиентам
@@ -34,9 +34,9 @@ header.header
         a.header__logo-link(href="./")
           img(src="images/logo.svg" alt="Логотип Медикамаркет" class="header__logo")
       .grid-container__block._flex-gap
-        button.button.header__catalog-btn.small
+        button.button.header__catalog-btn.small.js-open-catalog-menu
           span.button__inner
-            +icon-mono("menu")(class="button__icon" width="24" height="24")
+            +icon-mono("menu")(class="button__icon _shown" width="24" height="24")
             +icon-mono("cross")(class="button__icon _hidden" width="24" height="24")
             span.button__name
               | Каталог
@@ -45,3 +45,17 @@ header.header
           button.header__search-btn
             +icon-mono("search")(class="header__search-btn-icon" width="20" height="20")
           input(type="text" class="input" name="q" placeholder="Поиск оборудования")
+        .header__info-btns
+          .info-btn__wrapper
+            button.info-btn
+              +icon-mono("like")(class="info-btn__icon" width="24" height="24")
+              span.info-btn__count 7
+          .info-btn__wrapper
+            button.info-btn
+              +icon-mono("comparison")(class="info-btn__icon" width="24" height="24")
+              span.info-btn__count 7
+          .info-btn__wrapper
+            button.info-btn
+              +icon-mono("cart")(class="info-btn__icon" width="24" height="24")
+              span.info-btn__count 7
+  include catalogMenu.pug

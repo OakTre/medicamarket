@@ -6,18 +6,18 @@
 		"dev": "gulp watch",
 		"build:dev": "gulp build",
 		"build:prod": "gulp build --prod",
-    "predeploy": "gulp build --prod",
-    "deploy": "gh-pages -d build"
+		"predeploy": "gulp build --prod",
+		"deploy": "gh-pages -d build"
 	},
 	"lint-staged": {
 		"*.js": "eslint",
 		"*.pug": "pug-lint",
 		"*.scss": "stylelint"
 	},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OakTre/medicamarket.git"
-  },
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/OakTre/medicamarket.git"
+	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
@@ -32,8 +32,8 @@
 	],
 	"browserslist": [
 		"last 2 versions",
-    "> 1%",
-    "not ie <= 9"
+		"> 1%",
+		"not ie <= 9"
 	],
 	"author": "meme",
 	"license": "WTFPL",
@@ -72,6 +72,7 @@
 		"lint-staged": "^12.3.5",
 		"pug-lint": "^2.6.0",
 		"sass": "^1.51.0",
+		"simplebar": "^5.3.8",
 		"stylelint": "^14.5.3",
 		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-standard": "^25.0.0",

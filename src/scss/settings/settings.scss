@@ -12,7 +12,7 @@ html {
   font-size: 10px;
   line-height: 1.2;
 
-  @include mq(custom, max, 1366) {
+  @include mq(custom, max, 1536) {
     font-size: 9px;
   }
 
@@ -32,7 +32,7 @@ html {
 body {
   color: var(--color-base-dark);
   font: var(--font-text-t3);
-  background-color: var(--color-white);
+  background-color: var(--color-grey-50);
 }
 
 ul,
@@ -123,6 +123,8 @@ button {
   display: inline-flex;
   position: relative;
   transition: color 0.2s;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -162,7 +164,7 @@ img {
 }
 
 .site-container {
-  max-width: 1520px;
+  max-width: 1600px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -179,6 +181,7 @@ img {
 
 .page-main {
   flex-grow: 1;
+  margin-top: var(--header-height);
 }
 
 .button-reset {
@@ -226,6 +229,19 @@ select:-webkit-autofill:focus {
 
     &:nth-child(2) {
       grid-column: 18 span;
+    }
+  }
+}
+
+
+[data-simplebar] {
+  .simplebar-track.simplebar-vertical {
+    width: 0.7rem;
+  }
+
+  .simplebar-scrollbar {
+    &:before {
+      background: var(--color-grey-600);
     }
   }
 }
