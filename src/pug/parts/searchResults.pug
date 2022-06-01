@@ -1,0 +1,34 @@
+-
+  let links = [
+    "Автоматические тонометры",
+    "Автоматические тонометры на запястье",
+    "Полуавтоматические тонометры",
+    "Механические тонометры",
+    "Запасные части к тонометрам",
+  ]
+
+.search-results.js-search-results
+  .search-results__content.js-simple-bar
+    p.search-results__empty-content._is-hidden
+      | К сожалению по вашему запросу ничего не нашлось..
+    ul.search-results__cat-list
+      for item in links
+        li.search-results__cat-item
+          a.search-results__cat-link(href="/")= item
+    ul.search-results__cart-list
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 30 с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр AND UA-1300 с речевым выходом и сетевым адаптером", "img1", "5 569 ₽", "5 848", icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр автоматический AND UB-402 на запястье", "img1", "4 938 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 3а с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 3а с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 3а с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 3а с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)
+      li.search-results__carts-item
+        +catalog-cart-small("Тонометр LD 3а с сетевым адаптером", "img1", "2 967 ₽", null, icon = false, null)

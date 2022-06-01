@@ -167,6 +167,16 @@
     display: block;
     transform: translateY(-50%);
     color: var(--color-grey-500);
+
+    &.is-cross-shown {
+      .header__search-btn-icon {
+        display: none;
+
+        &._cross {
+          display: block;
+        }
+      }
+    }
   }
 
   &__search-btn-icon {
@@ -174,6 +184,12 @@
     height: 100%;
     fill: none;
     stroke: currentColor;
+
+    &._cross {
+      display: none;
+      fill: currentColor;
+      stroke: none;
+    }
   }
 
   &__info-btns {

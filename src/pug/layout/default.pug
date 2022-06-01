@@ -1,6 +1,7 @@
 include ../data/config.pug
 include ../mixins/icon.pug
 include ../mixins/buttons.pug
+include ../mixins/catalogCart.pug
 
 block variables
 
@@ -20,3 +21,4 @@ html(lang=siteLang)
 
   block scripts
     script(src="js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

@@ -42,9 +42,11 @@ header.header
               | Каталог
         +button("Акции", "sale", "small _stroke")(class="header__sales-btn")
         form.header__search(action="/")
-          button.header__search-btn
+          button.header__search-btn.js-search-btn(type="button")
             +icon-mono("search")(class="header__search-btn-icon" width="20" height="20")
-          input(type="text" class="input" name="q" placeholder="Поиск оборудования")
+            +icon-mono("cross")(class="header__search-btn-icon _cross" width="20" height="20")
+          input(type="text" class="input js-search-input" name="q" placeholder="Поиск оборудования")
+          include searchResults.pug
         .header__info-btns
           .info-btn__wrapper
             button.info-btn

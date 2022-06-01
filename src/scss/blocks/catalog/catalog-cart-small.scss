@@ -1,0 +1,74 @@
+.catalog-cart-small {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  &__link {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: darken;
+  }
+
+  &__info {
+
+  }
+
+  &__name {
+    display: inline-block;
+    font: var(--font-text-t4);
+    margin-bottom: 0.6rem;
+  }
+
+  &__details-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  &__price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font: var(--font-text-t4-md);
+    gap: 0.8rem;
+
+    &::after {
+      font: var(--font-text-t5);
+      color: var(--color-grey-600);
+      text-decoration: line-through;
+      content: attr(data-old-price);
+    }
+  }
+
+  &__count {
+    font: var(--font-text-t5);
+    padding: 0.1rem 0.3rem;
+    border-radius: 99.9rem;
+    background-color: var(--color-white);
+    color: var(--color-grey-300);
+  }
+
+  &__delete-btn {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--color-grey-600);
+  }
+}

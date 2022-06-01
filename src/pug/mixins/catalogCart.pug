@@ -1,0 +1,14 @@
+mixin catalog-cart-small(name, image, price, oldPrice, icon = true, count)
+  - let isOldPrice = oldPrice ? oldPrice : null
+  .catalog-cart-small
+    a(href="/" class="catalog-cart-small__link")
+      img(src=`images/catalog-cart/small/${image}.jpg` alt="" class="catalog-cart-small__image")
+    .catalog-cart-small__info
+      a.catalog-cart-small__name(href="/")= name
+      .catalog-cart-small__details-wrapper
+        span.catalog-cart-small__price(data-old-price=isOldPrice)= price
+        if count
+          span.catalog-cart-small__count count
+    if icon
+      button.catalog-cart-small__delete-btn
+        +icon-mono("trash")(class="catalog-cart-small__icon" width="16" height="16")
