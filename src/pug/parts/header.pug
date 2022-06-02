@@ -48,16 +48,19 @@ header.header
           input(type="text" class="input js-search-input" name="q" placeholder="Поиск оборудования")
           include searchResults.pug
         .header__info-btns
-          .info-btn__wrapper
-            button.info-btn
+          .info-btn__wrapper.js-popup-parent
+            button.info-btn.js-popup-open
               +icon-mono("like")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
-          .info-btn__wrapper
-            button.info-btn
+            include smallLikes.pug
+          .info-btn__wrapper.js-popup-parent
+            button.info-btn.js-popup-open
               +icon-mono("comparison")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
-          .info-btn__wrapper
-            button.info-btn
+            include smallComparison.pug
+          .info-btn__wrapper.js-popup-parent
+            button.info-btn.js-popup-open
               +icon-mono("cart")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
+            include smallCart.pug
   include catalogMenu.pug

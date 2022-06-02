@@ -1,0 +1,19 @@
+.popup.js-popup
+  .popup__container
+    .popup__head
+      span.popup__head-legend В корзине 5 товаров
+      span.popup__head-legend 16 940 ₽
+    ul.popup__body.js-simple-bar
+      li.popup__body-item
+        +catalog-cart-small("Тонометр AND UA-888 автоматический с универсальной манжетой и адаптером", "img1", "4 334 ₽", null, icon = true, "2 шт.", isEmpty = true)
+      li.popup__body-item
+        +catalog-cart-small("Тонометр LD 30 с сетевым адаптером", "img1", "4 334 ₽", null, icon = true, "2 шт.")
+      li.popup__body-item
+        +catalog-cart-small("Тонометр LD 30 с сетевым адаптером", "img1", "4 334 ₽", null, icon = true, "2 шт.")
+      li.popup__body-item
+        +catalog-cart-small("Тонометр LD 30 с сетевым адаптером", "img1", "4 334 ₽", null, icon = true, "2 шт.")
+      li.popup__body-item
+        +catalog-cart-small("Тонометр LD 30 с сетевым адаптером", "img1", "4 334 ₽", null, icon = true, "2 шт.")
+    .popup__footer
+      +button('В корзину', null, 'small _no-icon popup__footer-btn')
+      +button('Купить в 1 клик', null, 'small _no-icon _stroke popup__footer-btn')

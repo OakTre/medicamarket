@@ -4,6 +4,18 @@
   align-items: center;
   gap: 1.2rem;
 
+  &.mod-empty {
+    .catalog-cart-small__name,
+    .catalog-cart-small__price,
+    .catalog-cart-small__count {
+      color: var(--color-grey-600);
+    }
+
+    .catalog-cart-small__link {
+      opacity: 0.5;
+    }
+  }
+
   &__link {
     display: inline-block;
     width: 6rem;
@@ -56,13 +68,22 @@
     font: var(--font-text-t5);
     padding: 0.1rem 0.3rem;
     border-radius: 99.9rem;
-    background-color: var(--color-white);
-    color: var(--color-grey-300);
+    background-color: var(--color-grey-300);
+    color: var(--color-grey-600);
   }
 
   &__delete-btn {
     width: 1.6rem;
     height: 1.6rem;
+    margin-left: auto;
+    margin-right: 2.6rem;
+    flex-shrink: 0;
+
+    &:hover {
+      .icon {
+        stroke: var(--color-green-type4);
+      }
+    }
   }
 
   &__icon {
@@ -70,5 +91,11 @@
     height: 100%;
     fill: none;
     stroke: var(--color-grey-600);
+    transition: stroke var(--transition);
+  }
+
+  &__is-empty {
+    font: var(--font-text-t4);
+    color: var(--color-grey-600);
   }
 }

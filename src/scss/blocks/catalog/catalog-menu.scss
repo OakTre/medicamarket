@@ -68,6 +68,10 @@
       &::before {
         opacity: 1;
       }
+
+      .catalog-menu__link {
+        color: var(--color-green-type4);
+      }
     }
   }
 
@@ -82,7 +86,7 @@
     width: 2rem;
     height: 2rem;
     fill: none;
-    stroke: var(--color-base-dark);
+    stroke: currentColor;
   }
 
   &__categories-wrapper {
@@ -91,10 +95,14 @@
   }
 
   &__categories {
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 4rem 5.6rem 4rem 7rem;
     height: 100%;
+
+    &.is-active {
+      display: flex;
+    }
   }
 
   &__categories-blocks {

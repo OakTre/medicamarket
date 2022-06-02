@@ -102,34 +102,36 @@
         for item, index in items
           - num++
           - let isFirst = index === 0 ? "is-active" : null
-          li.catalog-menu__item(class=isFirst)
+          li.catalog-menu__item.js-hover-parent(class=isFirst)
             a.catalog-menu__link(href="/")
               +icon-mono(`cat${num}`)(class="catalog-menu__link-icon" width="20" height="20")
               span= item
 
       .catalog-menu__categories-wrapper
-        .catalog-menu__categories
-          a.catalog-menu__categories-legend(href="/") Медтехника для дома
-          .catalog-menu__categories-blocks
-            .catalog-menu__categories-left-block.js-simple-bar
-              .catalog-menu__categories-col
-                for catItem in catitems
-                  span.catalog-menu__categories-list-legend= catItem.name
-                  ul.catalog-menu__categories-list
-                    for cat in catItem.list
-                      li.catalog-menu__categories-item
-                        a.catalog-menu__categories-item-link(href="/")= cat
-              .catalog-menu__categories-col
-                for catItem in catitems2
-                  span.catalog-menu__categories-list-legend= catItem.name
-                  ul.catalog-menu__categories-list
-                    for cat in catItem.list
-                      li.catalog-menu__categories-item
-                        a.catalog-menu__categories-item-link(href="/")= cat
-            .catalog-menu__categories-right-block.js-simple-bar
-              .catalog-menu__categories-logos
-                - let num2 = 0
-                - for (let i = 0; i<16; i++)
-                  - num2++
-                  a.catalog-menu__logo-link(href="/")
-                    img(src=`images/menu-catalog/logos/logo${num2}.jpg` alt="" class="catalog-menu__logo")
+        for item, index in items
+          - let isFirstChild = index === 0 ? "is-active" : null
+          .catalog-menu__categories.js-hover-child(class=isFirstChild)
+            a.catalog-menu__categories-legend(href="/")= item
+            .catalog-menu__categories-blocks
+              .catalog-menu__categories-left-block.js-simple-bar
+                .catalog-menu__categories-col
+                  for catItem in catitems
+                    span.catalog-menu__categories-list-legend= catItem.name
+                    ul.catalog-menu__categories-list
+                      for cat in catItem.list
+                        li.catalog-menu__categories-item
+                          a.catalog-menu__categories-item-link(href="/")= cat
+                .catalog-menu__categories-col
+                  for catItem in catitems2
+                    span.catalog-menu__categories-list-legend= catItem.name
+                    ul.catalog-menu__categories-list
+                      for cat, index in catItem.list
+                        li.catalog-menu__categories-item
+                          a.catalog-menu__categories-item-link(href="/")= cat
+              .catalog-menu__categories-right-block.js-simple-bar
+                .catalog-menu__categories-logos
+                  - let num2 = 0
+                  - for (let i = 0; i<16; i++)
+                    - num2++
+                    a.catalog-menu__logo-link(href="/")
+                      img(src=`images/menu-catalog/logos/logo${num2}.jpg` alt="" class="catalog-menu__logo")
