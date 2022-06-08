@@ -5,11 +5,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const searchResults = document.querySelector(".js-search-results");
   const headerCrossBtn = document.querySelector(".js-search-btn");
 
-  // очищение инпута и скрытие результатов по клику на крестик
-  headerCrossBtn.addEventListener("click", ()=> {
+  const closeSearchResults = () => {
     searchResults.classList.remove("is-shown");
     searchInput.value = "";
     headerCrossBtn.classList.remove("is-cross-shown");
+  };
+
+  window.medikamarket_API.closeSearchResults = () => {
+    closeSearchResults();
+  };
+
+  // очищение инпута и скрытие результатов по клику на крестик
+  headerCrossBtn.addEventListener("click", ()=> {
+    closeSearchResults();
   });
 
   searchInput.addEventListener("keyup", () => {
@@ -22,8 +30,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       // убираем контент если пустое поле ввода
       if (searchInput.value === "") {
-        searchResults.classList.remove("is-shown");
-        searchInput.closest("form").querySelector(".js-search-btn").classList.remove("is-cross-shown");
+        closeSearchResults();
       }
     }, 300);
   });

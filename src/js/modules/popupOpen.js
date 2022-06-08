@@ -17,6 +17,7 @@ export default () => {
 
       switch (isPopupOpen) {
         case false:
+          window.medikamarket_API.closeSearchResults();
           popup.classList.add("is-shown");
           isPopupOpen = true;
           break;
@@ -41,4 +42,8 @@ export default () => {
       }
     }
   });
+
+  window.medikamarket_API.closePopups = () => {
+    closePopups();
+  };
 };

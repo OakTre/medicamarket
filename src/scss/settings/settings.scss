@@ -245,3 +245,24 @@ select:-webkit-autofill:focus {
     }
   }
 }
+
+.js-popup-parent {
+  position: relative;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.highlighted {
+  color: var(--color-green-type4) !important;
+}

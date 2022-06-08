@@ -42,16 +42,13 @@
     padding-left: 2.2rem;
     margin-right: 1.7rem;
 
-    &:nth-last-of-type(1) {
-      margin-right: 8.9rem;
-    }
-
     &._city {
       background-image: url(../assets/icons/mono/navigation.svg);
     }
 
     &._orderStatus {
       background-image: url(../assets/icons/mono/clock.svg);
+      margin-right: 8.9rem;
     }
   }
 

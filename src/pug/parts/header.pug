@@ -13,7 +13,9 @@ header.header
         a.header__page-link(href="./") Частным клиентам
         a.header__page-link(href="./") Бизнесу
       .grid-container__block
-        button.header__popup-btn._city Барнаул
+        .header__popup-btn-wrapper.js-popup-parent
+          button.header__popup-btn._city.js-popup-open Барнаул
+          include popups/popupCity.pug
         button.header__popup-btn._orderStatus Статус заказа
         ul.header__top-nav
           for item in topNav
@@ -52,15 +54,15 @@ header.header
             button.info-btn.js-popup-open
               +icon-mono("like")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
-            include smallLikes.pug
+            include popups/smallLikes.pug
           .info-btn__wrapper.js-popup-parent
             button.info-btn.js-popup-open
               +icon-mono("comparison")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
-            include smallComparison.pug
+            include popups/smallComparison.pug
           .info-btn__wrapper.js-popup-parent
             button.info-btn.js-popup-open
               +icon-mono("cart")(class="info-btn__icon" width="24" height="24")
               span.info-btn__count 7
-            include smallCart.pug
+            include popups/smallCart.pug
   include catalogMenu.pug

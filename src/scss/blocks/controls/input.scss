@@ -5,9 +5,19 @@
   color: var(--color-base-dark);
   font: var(--font-text-t3);
   width: 100%;
+  height: 4.4rem;
+
+  &.mod-big {
+    height: 5.6rem;
+    font: var(--font-btn-1);
+
+    @include placeholder {
+      font: var(--font-btn-1);
+    }
+  }
 
   @include placeholder {
-    color: var(--color-grey-400);
+    color: var(--color-grey-600);
     font: var(--font-text-t3);
   }
 }

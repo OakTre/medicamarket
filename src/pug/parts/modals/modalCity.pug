@@ -1,0 +1,56 @@
+-
+  const cities = [
+    "Барнаул",
+    "Воронеж",
+    "Самара",
+    "Москва",
+    "Волгоград",
+    "Челябинск",
+    "Санкт-Петербург",
+    "Красноярск",
+    "Ижевск",
+    "Новосибирск",
+    "Нижний Новгород",
+    "Владикавказ",
+    "Казань",
+    "Пермь",
+    "Иваново",
+    "Екатеринбург",
+    "Омск",
+    "Владимир",
+    "Томск",
+    "Ростов-на-Дону",
+    "Подольск",
+    "Пермь",
+    "Уфа",
+    "Йошкар-Ола",
+    "Омск",
+    "Владимир",
+    "Томск",
+    "Ростов-на-Дону",
+    "Подольск",
+    "Пермь",
+    "Уфа",
+    "Йошкар-Ола",
+    "Томск",
+    "Ростов-на-Дону",
+    "Подольск",
+    "Пермь",
+    "Уфа",
+    "Йошкар-Ола",
+  ]
+
+.modal__container.modal-city(data-target="city")
+  button.button-reset.modal-close.modal__close-btn(type="button")
+    span
+    span
+  .modal__content
+    .modal__legend Выберите город
+    form.modal-city__form
+      label.modal-city__input-label
+        input(type="search" name="city-search" id="search" placeholder="Быстрый поиск" data-items="search-items" class="input modal-city__input mod-big")
+        +icon-mono("search")(class="modal-city__icon" width="20" height="20")
+    .modal-city__cities-wrapper
+      .modal-city__cities(data-items-target="search-items")
+        for item in cities
+          button.modal-city__cities-item.js-highlighted-element(class="highlighted-element" data-city=item)= item
