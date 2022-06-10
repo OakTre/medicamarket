@@ -22,7 +22,18 @@
           <div class="header__row grid-container">
             <div class="grid-container__block"><a class="header__page-link" href="./">Частным клиентам</a><a class="header__page-link" href="./">Бизнесу</a></div>
             <div class="grid-container__block">
-              <button class="header__popup-btn _city">Барнаул</button>
+              <div class="header__popup-btn-wrapper js-popup-parent">
+                <button class="header__popup-btn _city js-popup-open">Барнаул</button>
+                <div class="popup js-popup popup_city">
+                  <div class="popup__container">
+                    <div class="popup__head"><span class="popup__head-legend">Ваш город Барнаул?</span></div>
+                    <div class="popup__footer">
+                      <button class="button small _no-icon"><span class="button__inner"><span class="button__name">Да, все верно</span></span></button>
+                      <button class="button small _no-icon _stroke" data-path="city"><span class="button__inner"><span class="button__name">Выбрать город</span></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <button class="header__popup-btn _orderStatus">Статус заказа</button>
               <ul class="header__top-nav">
                 <li class="header__top-nav-item"><a class="header__top-nav-link" href="./">Доставка и оплата</a></li>
@@ -1631,6 +1642,64 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__container modal-city" data-target="city">
+        <button class="button-reset modal-close modal__close-btn" type="button"><span></span><span></span></button>
+        <div class="modal__content">
+          <div class="modal__legend">Выберите город</div>
+          <form class="modal-city__form">
+            <label class="modal-city__input-label">
+              <input class="input modal-city__input mod-big" type="search" name="city-search" id="search" placeholder="Быстрый поиск" data-items="search-items">
+              <svg class="icon icon-search modal-city__icon" width="20" height="20">
+                <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
+              </svg>
+            </label>
+          </form>
+          <div class="modal-city__cities-wrapper">
+            <div class="modal-city__cities" data-items-target="search-items">
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Барнаул">Барнаул</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Воронеж">Воронеж</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Самара">Самара</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Москва">Москва</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Волгоград">Волгоград</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Челябинск">Челябинск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Санкт-Петербург">Санкт-Петербург</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Красноярск">Красноярск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Ижевск">Ижевск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Новосибирск">Новосибирск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Нижний Новгород">Нижний Новгород</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Владикавказ">Владикавказ</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Казань">Казань</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Пермь">Пермь</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Иваново">Иваново</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Екатеринбург">Екатеринбург</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Омск">Омск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Владимир">Владимир</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Томск">Томск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Ростов-на-Дону">Ростов-на-Дону</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Подольск">Подольск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Пермь">Пермь</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Уфа">Уфа</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Йошкар-Ола">Йошкар-Ола</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Омск">Омск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Владимир">Владимир</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Томск">Томск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Ростов-на-Дону">Ростов-на-Дону</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Подольск">Подольск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Пермь">Пермь</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Уфа">Уфа</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Йошкар-Ола">Йошкар-Ола</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Томск">Томск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Ростов-на-Дону">Ростов-на-Дону</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Подольск">Подольск</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Пермь">Пермь</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Уфа">Уфа</button>
+              <button class="modal-city__cities-item js-highlighted-element highlighted-element" data-city="Йошкар-Ола">Йошкар-Ола</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script src="js/main.js?v=0.0.0.3"></script>
